@@ -1,0 +1,310 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* General scrollbar styles */
+.my-scrollbar::-webkit-scrollbar {
+  width: 0px;  /* Width for vertical scrollbar */
+  height: 0px; /* Height for horizontal scrollbar */
+}
+
+/* Hide scrollbar for specific classes */
+.sidescrollbar::-webkit-scrollbar,
+.scroll-bar-hide::-webkit-scrollbar {
+  width: 0;    /* Hides vertical scrollbar */
+  height: 0;   /* Hides horizontal scrollbar */
+}
+
+/* Scrollbar Track */
+.my-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0); /* Transparent track */
+  border-radius: 0;
+}
+
+/* Scrollbar Handle */
+.my-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(36, 57, 251, 0); /* Semi-transparent handle */
+  border-radius: 5px;
+}
+
+/* Scrollbar Handle on Hover */
+.my-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(36, 57, 251, 0); /* Darker handle on hover */
+}
+
+/* Hide scrollbar on mobile devices */
+@media only screen and (max-width: 767px) {
+  .my-scrollbar::-webkit-scrollbar {
+    display: none; /* Hides scrollbar on mobile */
+    width: 0;
+    height: 0;
+  }
+}
+
+/* Hide ApexCharts toolbar */
+.apexcharts-toolbar {
+  display: none !important;
+}
+
+/* Hide scrollbar track for menu-scrollbar */
+.menu-scrollbar::-webkit-scrollbar-track {
+  display: none !important; /* Hides track */
+}
+
+
+
+/* General scrollbar styles */
+::-webkit-scrollbar {
+  width: 4px;  /* Width for default scrollbars */
+  height: 4px; /* Height for horizontal scrollbars */
+}
+
+/* Hide scrollbar for specific classes */
+.sidescrollbar::-webkit-scrollbar,
+.scroll-bar-hide::-webkit-scrollbar {
+  width: 0;    /* Hides vertical scrollbar */
+  height: 0;   /* Hides horizontal scrollbar */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 142, 142, 0); /* Transparent background */
+  border-radius: 0;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(221, 187, 34, 0.62); /* Semi-transparent handle */
+  border-radius: 5px;
+}
+
+/* Scrollbar Handle on Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(228, 144, 35, 0.71); /* Darker handle on hover */
+}
+
+/* Hide scrollbar on mobile devices */
+@media only screen and (max-width: 767px) {
+  ::-webkit-scrollbar {
+    display: none; /* Hides scrollbar on mobile */
+    width: 0;
+    height: 0;
+  }
+}
+
+/* Hide ApexCharts toolbar */
+.apexcharts-toolbar {
+  display: none !important;
+}
+
+/* Hide scrollbar track for menu-scrollbar */
+.menu-scrollbar::-webkit-scrollbar-track {
+  display: none !important; /* Hides track */
+}
+
+
+
+
+.autoRotate{
+  animation: autoRotateAnimation;
+  animation-timeline: view();
+}
+
+@keyframes autoRotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(220deg);
+    }
+  }
+
+  .autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+  }
+  
+  @keyframes autoShowAnimation {
+      from {
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+
+    .wraper {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      height: 400px;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    .card {
+      width: 80px;
+      border-radius: .75rem;
+      background-size: cover;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 2rem;
+      margin: 0 10px;
+      display: flex;
+      align-items: flex-end;
+      transition: .6s cubic-bezier(.28,-0.03,0,.99);
+      box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    }
+  .card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+  }
+  .card > .row > .disc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+  }
+  .disc h4 {
+    text-transform: uppercase;
+  }
+  input {
+    display: none;
+  }
+
+  input:checked + label {
+    width: 600px;
+  }
+  
+ input:checked + label .disc {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+ }
+ .card[for="c1"] {
+  background-image: url('https://krishnabhog.com/cdn/shop/articles/Krishna_Bhog_-_40_Shri_Krishna_Quotes_Captions_for_Instagram.webp?v=1717249205');
+ }
+ .card[for="c2"] {
+  background-image: url('https://5.imimg.com/data5/SELLER/Default/2023/12/365695060/SM/DB/DT/20619026/7064c5fb46d0466ac8a547ee42d22b02-500x500.jpg');
+ }
+ .card[for="c3"] {
+  background-image: url('https://i.pinimg.com/736x/b8/4d/10/b84d10c7b3d644834531194ab56b5ba8.jpg');
+ }
+ .card[for="c4"] {
+  background-image: url('https://i.pinimg.com/736x/0e/78/c7/0e78c7e055c5960d10fcadd4c4331da6.jpg');
+ }
+ .card[for="c5"] {
+  background-image: url('https://i.pinimg.com/originals/9b/2f/c7/9b2fc79dd2f9b49af3292b42af7cf800.jpg');
+ }
+
+
+
+ .banner{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  
+ }
+ .banner .slider{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  z-index: 2;
+ }
+ @keyframes autoRun{
+  from{
+    transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+  }to{
+    transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
+  }
+ }
+ .banner .slider .item{
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: 
+      rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+      translateZ(550px);
+ }
+ .banner .slider .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ }
+
+ /* .banner .content{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1400px, 100vw);
+  height: max-content;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+ }
+ .banner .content h1{
+  font-family: 'ICA Rubrik';
+  font-size: 16em;
+  line-height: 1em;
+  color: #25283b;
+  -webkit-text-stroke: 2px #d2d2d2;
+  color: transparent;
+  z-index: 2;
+ }
+ .banner .content .author{
+  font-family: Poppins;
+  text-align: right;
+  max-width: 200px;
+ }
+ .banner .content h2{
+  font-size: 3em;
+ } */
+/* .banner .content .model{
+  background-image: url('https://i.pinimg.com/736x/ae/d8/fc/aed8fcf8ce36dc02ef01154b22ff4ab9.jpg');
+  width: 100%;
+  height: 75vh;
+  bottom: 0;
+  left: 0;
+  background-size: auto 130%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
+  
+} */
+
+
+
+  
